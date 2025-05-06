@@ -1,5 +1,7 @@
-import 'package:aula01/aula01.dart';
-import 'package:aula01/formulario.dart';
+import 'package:aula01/data/ContatoInherited.dart';
+import 'package:aula01/screens/aula01.dart';
+import 'package:aula01/components/contato.dart';
+import 'package:aula01/screens/telaPrincipal.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -17,11 +19,11 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
         useMaterial3: true,
         appBarTheme: const AppBarTheme(
-          backgroundColor: Colors.deepPurple, // 👈 força a cor do AppBar
+          backgroundColor: Colors.blue, // 👈 força a cor do AppBar
           foregroundColor: Colors.white,
         ),
       ),
-      home: Aula01(),
+      home: ContatoInherited(child: TelaPrincipal()),
     );
   }
 }

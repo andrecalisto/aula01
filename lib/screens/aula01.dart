@@ -1,4 +1,4 @@
-import 'package:aula01/formulario.dart';
+
 import 'package:flutter/material.dart';
 
 class Aula01 extends StatefulWidget {
@@ -60,7 +60,7 @@ class _Aula01State extends State<Aula01> {
         ElevatedButton(
           onPressed: () {
             print('Você apertou o botão');
-            Navigator.push(context, MaterialPageRoute(builder: (context) => Formulario(),),);
+            //Navigator.push(context, MaterialPageRoute(builder: (context) => Formulario(),),);
           },
           child: Text('Aperte o Botão!'),
         ),
