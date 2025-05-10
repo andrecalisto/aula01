@@ -26,12 +26,13 @@ class _TelaPrincipalState extends State<TelaPrincipal> {
 
                 case ConnectionState.none:
                   // TODO: Handle this case.
+                  return Center(child: Text('Nenhuma conexão iniciada.'));
                   //throw UnimplementedError();
                 case ConnectionState.waiting:
-                  // TODO: Handle this case.
+                  return Center(child: CircularProgressIndicator());
                   //throw UnimplementedError();
                 case ConnectionState.active:
-                  // TODO: Handle this case.
+                  return Center(child: Text('Carregando...'));
                   //throw UnimplementedError();
                 case ConnectionState.done:
                   if(snapshot.hasData && items != null){
@@ -52,7 +53,7 @@ class _TelaPrincipalState extends State<TelaPrincipal> {
                       ),
                     );
                   }
-                  throw UnimplementedError();
+                  return Center(child: Text('Não há nenhum dado encontrado'));
               }
             }),
       ),
